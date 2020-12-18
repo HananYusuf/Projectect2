@@ -2,3 +2,15 @@
     form.login {
     margin-top: 50px;
     }
+
+        .splash-img {
+            width: 100%;
+            margin-left: -15px;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+        
+        .login-container {
+            border-radius: 8px;
+            background-color: #f0f0f5;
+        }
