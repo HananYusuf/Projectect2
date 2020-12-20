@@ -9,9 +9,17 @@
             border-top-left-radius: 8px;
             border-bottom-left-radius: 8px;
         }
-        
-        .login-container {
+
+        .car-container{
             border-radius: 8px;
+            background-color: #f0f0f5;
+        }
+
+        .login-container {
+            
+            margin-top: 50px;
+            border-radius: 8px;
+            padding: 30px;
             background-color: #f0f0f5;
         }
 
