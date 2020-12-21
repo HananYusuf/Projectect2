@@ -1,5 +1,5 @@
 {
-  "name": "Projectect2",
+  "name": "1-Passport-Example",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -15,10 +15,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/HananYusuf/Projectect2/issues"
-  },
-  "homepage": "https://github.com/HananYusuf/Projectect2#readme",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "bcryptjs": "^2.4.3",
@@ -28,6 +24,16 @@
     "nodemon": "^2.0.6",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
-    "sequelize": "^6.3.5"
+    "sequelize": "^5.8.6"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "mocha": "^5.2.0",
+    "prettier": "^1.13.7"
   }
 }

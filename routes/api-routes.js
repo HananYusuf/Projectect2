@@ -59,4 +59,68 @@ module.exports = function(app) {
       });
     }
   });
+
+  // Route for 
+  app.get("/api/vehicle", function(req, res){
+    var query = {};
+    if(req.query.user_id){
+        query.UserId = req.query.user_id;
+    }
+
+    db.Vehicle.findAll({
+        where:query,
+        include: [db.User]
+    })
+    .then((data) => {
+        res.json(data)
+    });
+  });
+
+  app.get("/api/vehicle/:id", function(req, res){
+    db.Vehicle.findOne({
+        where: {
+            id: req.params.id
+        },
+        include: [db.User]
+    })
+    .then((data) => {
+        res.json(data);
+    });
+  });
+
+  app.post("/api/vehicle", function(req, res){
+      db.Vehicle.create({
+        vehicle_make: req.body.vehicle_make,
+        last_mileage: req.body.last_mileage,
+        current_driver: req.body.current_driver,
+        current_location: req.body.current_location,
+        reg_exp: req.body.reg_exp,
+        last_oilchange: req.body.last_oilchange,
+        reported_problems: req.body.reported_problems
+      }).then((data) => {
+          res.json(data);
+      });
+  });
+
+  app.delete("/api/vehicle/:id", function(req, res){
+      db.Vehicle.destroy({
+          where: {
+              id: req.params.id
+          }
+      })
+      .then((data) => {
+          res.json(data);
+      });
+  });
+
+  app.put("/api/vehicle", function(req, res){
+      db.Vehicle.update(
+          req.body,
+          {
+              where: {
+                  id: req.body.id
+          }
+      });
+  });
+  
 };
