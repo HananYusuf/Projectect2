@@ -52,5 +52,12 @@ module.exports = function(sequelize, DataTypes) {
       null
     );
   });
+  User.associate = function(models){
+    // associating user with vehicles
+    // when user is deleted, associated vehicles will also be deleted
+    User.hasMany(models.Vehicle, {
+      onDelete: "cascade"
+    });
+  };
   return User;
 };

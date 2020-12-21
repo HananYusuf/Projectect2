@@ -32,9 +32,8 @@ $(document).ready(() => {
     reportedProb.val("");
   });
 
-
     function addVehicle({vehicle_make, last_mileage, current_driver, current_location, reg_exp, last_oilchange, reported_problems}) {
-      $.post("/api/vehicles", {
+      $.post("/api/vehicle", {
         vehicle_make,
         last_mileage,
         current_driver,
@@ -46,6 +45,7 @@ $(document).ready(() => {
       .then(() => {
         window.location.replace("/members");
         alert("Vehicle has been added");
+        
       })
       .catch(handleError);
     }
