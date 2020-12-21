@@ -1,0 +1,42 @@
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/logout">Logout</a>
+        </div>
+    </div>
+</nav>
+<section class="jumbotron text-center justify-content-center">
+    <div class="container">
+        <h1 class="display-4">Welcome: <span class="member-name"></span></h1>
+        <p class="lead">This is your vehicle monitoring system.</p>
+        <button type="button" class="btn-lg btn-dark mx-3 addVehicleBtn">Add Vehicle</button>
+    </div>
+</section>
+
+<div>
+    <div class="row p-5 ml-5">
+        <div class="col-4 vehicle mr-5">
+            <h2>Current Vehicles</h2>
+            <ul class="list-group mb-3">
+                {{#each Vehicles}}
+                    <li class="m-2">
+                        <div class="row border p-3 bg-light rounded">
+                        <div class="col-9">
+                            <h5>Make and Model 1</h5>
+                            {{vehicle_name}}
+                        </div>
+                        <div class="col-3">
+                            <button type="button" class="btn btn-dark mx-3 text-nowrap" data-id="{{id}}">View Details</button>
+                        </div>
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col-6 vehicle-details">
+            <h2>Vehicle Details</h2>
+        </div>
+    </div>
+  </div>
+  </div>
+
