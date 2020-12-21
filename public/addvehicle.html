@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Add Vehicles</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+<link href="stylesheet/style.css" rel="stylesheet">
+</head>
+
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+    <div class="navbar-header">
+        <div class="navbar-header"></div>
+        <a class="navbar-brand navbar-right" href="members.html">
+            Back
+        </a>
+    </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+    <div class="col-md-6 col-md-offset-3 signup-container">                         
+        <h2>Add Vehicle</h2>
+        <form class="signup">
+        <div class="form-group">
+            <label>Vehicle Name</label>
+            <input type="text" class="form-control" id="vehicle_name" placeholder="Vehicle Name">
+        </div>
+        <div class="form-group">
+            <label>Millage</label>
+            <input type="text" class="form-control" id="mileage" placeholder="Mileage">
+        </div>
+        <div class="form-group">
+            <label>Problems Restored</label>
+            <input type="text" class="form-control" id="problems_restored" placeholder="Problems Restored">
+        </div>
+        <div class="form-group">
+            <label>Last Location</label>
+            <input type="text" class="form-control" id="last_location" placeholder="Last Location">
+        </div>
+        <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span> <span class="msg"></span>
+        </div>
+        <button type="submit" class="btn btn-default">Add</button> 
+        </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Make sure js file below is correctly referenced. -->
+<script type="text/javascript" src="js/addvehicle.js"></script>
+
+</body>
+
+</html>
