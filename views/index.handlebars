@@ -1,0 +1,60 @@
+{{!-- with context of hbsObject {burger: []} --}}
+<main class="container-fluid">
+    <div class="row">
+        <aside class="container-fluid col-3 bg-dark rounded mt-2">
+            <h2 class="text-center text-white">Vehicles </h2>
+            <ul>
+                {{#each vehicles}}
+                    {{!-- {{#unless}}
+                <div type="button" onclick="devour(this)" data-burger_id={{this.id}} class="card mx-auto bg-active mt-2 btn-outline-danger">
+                    <div class="card-body">
+                        {{this.burger_name}}
+                    </div>
+                </div>
+                    {{/unless}} --}}
+                {{/each}}
+            </ul>
+        </aside>
+        <div class"container-fluid col-9">
+            <br><br><br>
+        </div>
+        <aside class="container-fluid col-4 bg-dark rounded mt-2">
+            <h2 class="text-center text-white">Vehicle Details</h2>
+            <ul>
+            {{#each vehicles}}
+                {{#if devoured}}
+                    <div class="card mx-auto bg-secondary mt-2">
+                        <div class="card-body">
+                            {{this.vehicle_name}}    
+                        </div>
+                    </div>
+                {{/if}}
+            {{/each}}
+            </ul>
+        </aside>
+    </div>
+
+    <div class="row">
+        <form class="create-form container col-3" action = "/api/" method="POST">
+            <h2 class="text-center text-white"></h2>
+            <div class="form-group">
+                <input class="form-control" rows ="4" placeholder="view details" name = ""> </textarea>
+                <button type = "submit" class="btn btn-danger btn-lg mt-3 mx-auto">Submit</button>
+            </div>
+        </form>
+    </div>
+</main>
+<script>
+    function viewdetail(btn){
+        //wrap btn with jquery
+        let $btn = $(btn);
+
+        let id = $btn.data('vehicle_id');
+        $.ajax("/api/" + id, {
+            type: "GET",
+            data: id
+        }).then(function (){
+            location.reload();
+        });
+    }
+    </script>
