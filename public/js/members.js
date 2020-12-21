@@ -4,5 +4,10 @@
         $.get("/api/user_data").then(data => {
         $(".member-name").text(data.email);
         });
+
+        $("button.addVehicleBtn").on("click", function(event){
+            event.preventDefault();
+            window.location.replace("/vehicles")
+          });
     });
     
