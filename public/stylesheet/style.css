@@ -22,6 +22,14 @@
             padding: 30px;
             background-color: #f0f0f5;
         }
+        
+        .signup-container {
+            
+            margin-top: 50px;
+            border-radius: 8px;
+            padding: 30px;
+            background-color: #f0f0f5;
+        }
 
         body {
     background-color: rgb(50, 87, 97);

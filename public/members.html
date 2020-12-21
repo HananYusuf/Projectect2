@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Passport Authentication</title>
+    <title>Members</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
@@ -24,7 +24,7 @@
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron">
             <div class="container">
-                <h1 class="display-3">Company Name</h1>
+                <h1 class="display-3"><span class="company-name"></span></h1>
                 <a class="btn btn-outline-primary btn-lg" href="addvehicle.html" role="button">Add vehicle &raquo;</a>
                 <a class="btn btn-outline-primary btn-lg" href="#" role="button">Update vehicle &raquo;</a>
                 <a class="btn btn-outline-primary btn-lg" href="#" role="button">Delete vehicle &raquo;</a>
@@ -36,8 +36,12 @@
             <!-- Example row of columns -->
             <div class="row">
                 <div class="col-3">
-                    <div class="col-md-4">
+                    <div class="col-md-2">
                         <h2 style= "color:white;">Vehicles</h2>
+                            <button type="button" class="btn btn-light">Company Car 1</button>
+                            <button type="button" class="btn btn-light">Company Car 2</button>
+                            <button type="button" class="btn btn-light">Company Car 3</button>
+                            <button type="button" class="btn btn-light">Company Car 4</button>
                             <h4><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></h4>
                     </div>
                 
@@ -55,6 +59,10 @@
     <footer class="container">
         <p></p>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/members.js"></script>
+
 </body>
 
 </html>
