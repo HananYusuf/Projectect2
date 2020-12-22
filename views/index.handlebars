@@ -37,6 +37,21 @@
             <h2>Vehicle Details</h2>
         </div>
     </div>
-  </div>
-  </div>
+</div>
+</div>
+
+<script>
+    function uploadVehicle(data){
+        var vehicle = {
+            vehicle_make: data.vehicle_make,
+
+        }
+        $.ajax("/api/vehicle", {
+            type: "GET",
+            data: {}
+        }).then(function (){
+            location.reload();
+        });
+    }
+</script>
 
