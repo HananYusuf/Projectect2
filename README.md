@@ -37,8 +37,6 @@ Feel free to submit issues and enhancement requests.
 ## Questions?
 For any questions you may have, feel free to find me via the information provided below:
 
-Email:
-afetyusuf.gggnc@gmail.com
 
 [Github Page]
 
