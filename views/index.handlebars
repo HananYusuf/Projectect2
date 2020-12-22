@@ -1,26 +1,21 @@
 <div class="container">
-    <div class="row p-5 ml-5">
-        <div class="col-4 vehicle mr-5">
-            <h2>Current Vehicles</h2>
-            <ul class="list-group mb-3">
-                {{#each vehicleData}}
-                    <li class="m-2">
-                        <div class="row border p-3 bg-light rounded">
-                        <div class="col-9">
-                            <h5>{{vehicle_make}}</h5>
-                        </div>
-                        <div class="col-3">
-                            <button type="button" class="btn btn-dark mx-3 text-nowrap" data-id="{{id}}">View Details</button>
-                        </div>
-                        </div>
-                    </li>
-                {{/each}}
-            </ul>
-        </div>
-        <div class="col-6 vehicle-details">
-            <h2>Vehicle Details</h2>
-        </div>
+    <div class="row">
+        <div class="col-4">
+        {{#each vehicleData}}
+            <div class="card border-dark m-3" style="max-width: 18rem;">
+                <div class="card-header"><h3>{{vehicle_make}}</h3></div>
+                    <div class="card-body text-dark">
+                        <h5 class="card-title">Current Vehicle Driver: {{current_driver}}</h5>
+                        <p class="card-text"><h5>Last Reported Mileage: </h5><p>{{last_mileage}}</p></p>
+                        <p class="card-text"><h5>Vehicle Current Location: </h5><p>{{current_location}}</p></p>
+                        <p class="card-text"><h5>Registration Expiry: </h5><p>{{reg_exp}}</p></p></p>
+                        <p class="card-text"><h5>Last Oil Change Miles: </h5><p>{{last_oilchange}}</p></p>
+                        <p class="card-text"><h5>Reported Problems: </h5><p>{{reported_problems}}</p></p>
+                        <button type="click" class="btn btn-secondary mx-3 text-nowrap" data-id="{{id}}">Delete Vehicle</button>
+                    </div>
+                </div>
+            </div>    
+        {{/each}}
     </div>
 </div>
-
-
+</d>
