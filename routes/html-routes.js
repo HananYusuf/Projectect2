@@ -31,19 +31,13 @@ module.exports = function(app) {
       where: {
         UserId: req.user.id
       }
-    })
-    .then(data => {
-      console.log(data)
+    }).then(data => {
+      console.log(data);
       res.render("index", {
-        first_name: req.user.first_name,
-        last_name: req.user.last_name,
-        company_name: req.user.company_name,
-        email: req.user.email,
         id: req.user.id,
         vehicleData: data
-      })
-    })
-    
+      });
+    });
   });
 
   app.get("/vehicles", (req, res) => {
