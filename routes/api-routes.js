@@ -90,6 +90,7 @@ module.exports = function(app) {
 
   app.post("/api/vehicle", function(req, res){
       db.Vehicle.create({
+        UserId: req.user.id,
         vehicle_make: req.body.vehicle_make,
         last_mileage: req.body.last_mileage,
         current_driver: req.body.current_driver,
@@ -117,7 +118,7 @@ module.exports = function(app) {
       db.Vehicle.update(
           req.body,
           {
-              where: {
+            where: {
                   id: req.body.id
           }
       });
