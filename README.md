@@ -1,4 +1,4 @@
-# Company Profile
+# Asset Tracker
 
 ## Description
 
@@ -17,7 +17,8 @@ This is a full stack application that follows the MVC design pattern. The progra
 The program uses MYSQL, Sequelize ORM and Node to query and route data in the app. Express for the backend web framework and handlebars to dynamically generate the HTML. Twilio's Rest API to query and manage data and also to send notifications via text message.
 
 ## Usage 
-To run this application locally, Install the dependencies, verify database connection information, run the database in my SQL Workbench. Run `node server.js` on your terminal to start the server and follow the link or open it on your browser to view the application your computer(locally).
+To run this application locally, Install the dependencies, verify database connection information, run the database in my SQL Workbench. Run `node server.js` on your terminal to start the server and follow the link or open it on your browser to view the application your computer(locally). The application running on Heroku can be found [Here](https://arcane-basin-49331.herokuapp.com/)
+
 
 ![](public/img/login.png)
 
